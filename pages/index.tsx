@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import clientPromise from '../lib/mongodb'
 import { InferGetServerSidePropsType } from 'next'
+import PromptBox from '../components/PromptBox'
 
 export async function getServerSideProps(context) {
   try {
@@ -30,6 +31,9 @@ export default function Home({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <div className="container">
+
+      <PromptBox />
+
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
